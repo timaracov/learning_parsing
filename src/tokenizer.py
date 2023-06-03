@@ -163,7 +163,6 @@ class Tokenizer:
         self.input_string = input_string
         self.position = 0
         self.char = self.input_string[self.position]
-        self._is_indent = False
 
     def next_token(self):
         if self.position >= len(self.input_string):
@@ -172,8 +171,6 @@ class Tokenizer:
         self.char = self.input_string[self.position]
         if self.char in SYMBOLS:
             self.position += 1
-            if self.char == "\n":
-                self._is_indent = True
             return SYMBOLS[self.char]
         if self.is_whitespace(self.char):
             self.position += 1
