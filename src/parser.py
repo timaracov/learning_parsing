@@ -1,8 +1,7 @@
 from pprint import pprint
 
-from typing import Type
 from tokenizer import (
-    Token, TokenType, Tokenizer,
+    TokenType, Tokenizer,
     SYMBOLS, KEYWORDS, SCOPES, TYPES
 )
 
